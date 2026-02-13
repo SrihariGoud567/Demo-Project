@@ -1,0 +1,1 @@
+function showMsg(){alert("your static file working successfully");}

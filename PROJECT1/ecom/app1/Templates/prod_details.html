@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+    <style>
+        .card {
+            width: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<h2>All Categories</h2>
+
+{% for i in produ_id %}
+    <div class="card">
+        {% if i.Image %}
+            <img src="{{ i.Image.url }}">
+        {% else %}
+            <p>No Image</p>
+        {% endif %}
+        <h3>{{ i.name }}</h3>
+    </div>
+    <h1>{{i.name}}</h1>
+    <p>{{i.Price}}</p>
+{% endfor %}
+
+</body>
